@@ -58,7 +58,8 @@ roles/iam.serviceAccountUser (to assign the runtime identity)
 Project Structure
 Your project directory should be structured as follows. The deploy command is run from outside the simnet_agent package folder.
 
-.
+
+
 ├── cloud_run_deploy.sh
 └── simnet_agent/
     ├── __init__.py
@@ -66,6 +67,8 @@ Your project directory should be structured as follows. The deploy command is ru
     ├── agent.py
     ├── bigquery_logger.py
     └── prompts.py
+
+    
 Configuration
 The BigQuery logger (bigquery_logger.py) will automatically use environment variables. While GOOGLE_CLOUD_PROJECT is the only one strictly required (as the others have defaults), you can set them all:
 
@@ -76,6 +79,8 @@ export BIGQUERY_DATASET_ID="simnet_aero_bot"
 export BIGQUERY_TABLE_ID="simnet_conversations"
 export GOOGLE_CLOUD_LOCATION="us-central1"
 The adk_config.yaml is included to ensure that any uploaded images are correctly handled in memory by the ADK runner.
+
+
 
 Deployment
 Ensure you have authenticated with gcloud and set your project:
