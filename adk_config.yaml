@@ -1,0 +1,5 @@
+# adk_config.yaml (create this in your simnet_agent directory)
+runner:
+  save_input_blobs_as_artifacts: true
+  artifact_service:
+    type: "in_memory"
